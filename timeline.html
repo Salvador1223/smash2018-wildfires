@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Timeline</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #474e5d;
+}
+
+.timeline h2, p {
+  color: black;
+  background-color: white;    
+}    
+
+      
+
+      /* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid orange;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="nav">
+        <ol>
+          <li><button type="button" name="button" onclick="window.location.href='aboutus.html'">About Us</button></li>
+          <li><button type="button" name="button" onclick="window.location.href='timeline.html'">Timeline</button></li>
+          <li><button type="button" name="button" onclick="window.location.href='map.html'">Map</button></li>
+          <li><button type="button" name="button" onclick="window.location.href='aboutwildfires.html'">FAQs</button></li>
+          <li><button type="button" name="button" onclick="window.location.href='index.html'">Home</button></li>                    
+        </ol>
+      </div>
+    <br/>
+    <h1 id="title">Timeline</h1>    
+    </div>
+    
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>June 23, 2016: The Erskine fire in Kern County; 48,019 acres burned</h2>
+      <p>The Erskine fire took two lives and destroyed nearly 300 homes before it was contained.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>July 22, 2016: Soberanes fire in Monterey County; 132,000 acres burned</h2>
+      <p>The Soberanes fire ravaged the Big Sur coast, consuming nearly 60 structures. It took 83 days to contain the fire. With more than 5,000 firefighters on the ground, the Soberanes fire ballooned to one of the most expensive firefighting operation in modern U.S. history. The rains that followed the Soberanes fire caused a landslide in early 2017 that ruined Pfeiffer Canyon Bridge and closed Highway 1 on the California coast.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>July 22, 2016: The Sand fire in Los Angeles County; 41,432 acres burned</h2>
+      <p>The Sand fire lasted nearly two weeks, destroyed 18 homes, and spurred the evacuation of about 20,000 people from the Santa Clarita Valley north of Los Angeles. The fire was pushed into the Angeles National Forest shortly after it sparked. Hundreds of horses, goats, chickens, and other farm animals were rescued.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>August 13, 2016: The Chimney fire of San Luis Obispo County; 46,344 acres burned</h2>
+      <p>The Chimney fire burned for 25 days and swallowed 70 structures near Lake Nacimiento. At its peak, nearly 4,000 firefighting personnel were on the scene.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>August 26, 2016: The Blue Cut fire in San Bernardino County; 36,272 acres burned</h2>
+      <p>The Blue Cut fire raged for seven days and led to the mandatory evacuation of more than 82,000 Californians. More than 300 buildings were destroyed.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>July 16, 2017: The Detwiler fire in Mariposa County; 81,826 acres burned</h2>
+      <p>The Detwiler fire destroyed more than 100 structures, and a mandatory evacuation was ordered for the town of Mariposa and surrounding area.</p>
+    </div>
+  </div>
+<div class="container left">
+    <div class="content">
+      <h2>October 8–9, 2017: About 11 wine country and Northern California fires; more than 200,000 acres burned</h2>
+      <p>The Nuns fire that ran through Napa and Sonoma counties started Oct. 8 and claimed 56,600 acres before it was contained in February of this year. Nearly 1,400 structures were destroyed. The same day in 2017, the Atlas fire began. It went on to burn 51,600 acres in Napa and Solano counties by the time it was contained in February. Also on Oct. 8, the Tubbs fire of Napa and Sonoma counties started. It remains the most destructive wildfire in California history. More than 5,600 structures were destroyed. The fire spread quickly, with winds reaching 50 miles per hour. Damages exceeded $2 billion, and 22 people died. And those three weren’t the only fires in the region at the time.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>December 4, 2017: The Thomas fire in Ventura and Santa Barbara counties; 281,893 acres burned</h2>
+      <p>The Thomas fire was the largest wildfire in modern California history, and it took about five weeks to contain it. About a month into the fire, rain season started, causing massive mudslides that took 21 people’s lives. More than 104,000 people had to evacuate their homes. Damages from the fire exceeded $2 billion, and more than 1,000 structures were destroyed. About 250,000 people in the area lost power.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>June 30, 2018: The County fire in Lake, Napa, and Yolo counties; 90,288 acres burned</h2>
+      <p>The cause of this fire was an improperly installed livestock fence. It is fully contained.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>July 13, 2018: The Ferguson fire in Mariposa County; 57,846 acres burned</h2>
+      <p>This fire is currently about 33 percent contained and has resulted in two firefighting-related deaths so far. After five years of drought and beetle infestation, the area is now filled with dead trees and highly combustible dry pine needles.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>July 23, 2018: The Carr fire in Shasta County; 110,154 acres burned</h2>
+      <p>The largest fire to start in 2018, the Carr fire has already engulfed more than 110,000 acres (roughly seven times the size of Manhattan) and is only 27 percent contained. More than 800 homes have been consumed, and about 3,400 firefighting personnel are on the scene to try to control the blaze. By the end of last week, the Carr fire started to produce “fire vortexes,” which are basically fire tornadoes that can jump over roads and rivers. As the hot air from the fire rises, it swirls into a plume that spews carbon monoxide and creates its own weather system. At least six people have died in the Carr fire.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>July 27, 2018: The Mendocino Complex fire in Mendocino County; 56,087 acres burned</h2>
+      <p>This ongoing fire—which was originally classified as two separate fires—is only 10 percent contained. Cal Fire decided to rename the River fire and the Ranch fire the Mendocino Complex fire because they are in the same general area. The Mendocino area fires almost doubled in size overnight on Sunday. About 14,000 people have been ordered to evacuate Lake County.</p>
+    </div>
+  </div>
+
+    
+    </div>
+  </body>
+</html>
