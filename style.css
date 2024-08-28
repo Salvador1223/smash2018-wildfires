@@ -1,0 +1,333 @@
+/* CSS files add styling rules to your content */
+* {
+  text-align: left;
+  box-sizing: border-box;
+background-color: #474e5d;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/*  .header {
+  background-color: #C5C5C5;
+	height:300px;
+	border-width: 100%;
+	padding: 40px 0;
+	margin: 0;	
+  }  
+ */
+html {
+  box-sizing: border-box;
+}
+
+#plugca {
+  color: #92FAFF;
+  }
+
+h3 {
+  color: white;
+}
+
+h1 {
+  font-size: 90px;
+	text-align: center;
+	color: black;
+  top: 50%;
+  background-color: #92FAFF;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  text-align: center;
+}
+
+.header {
+  background-color: #92FAFF;
+  height: 250px;
+  padding: 40px 0;
+  margin: 0;
+  
+}
+
+.nav {
+/*    list-style-type: none;
+    margin: 0;
+    padding: 0;*/
+/*     overflow: hidden; */
+/*     background-color: #145dd1; */
+  width: 98%;
+  height: 8%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+/*     display:inline; */
+  top: 0;
+  transform: skew();
+  z-index: 1;
+}
+
+.nav ol {
+  list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.nav li {
+  float: right;
+  display: inline;
+}
+
+
+.nav button li {
+  display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+}
+  
+
+
+.list{
+  flex-direction: row;
+}
+/* #search-tools{ 
+  position: fixed;
+  bottom:50;
+  right:50;
+  width:500px;
+  border:3px solid;
+  } */
+
+/* h1 {
+  font-style: italic;
+  color: #00000;
+  text-align: center;
+} */
+h3 {
+  font-style: italic;
+  color: #00000;
+  text-align: left;
+}
+
+
+button {
+/*   float: right; */
+  background-color: #92FAFF;
+  border: none;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+button:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid #92FAFF;
+}
+
+#title{
+  margin: auto; 
+  font-family: Rubik;
+  text-align: center;
+  background-color: #92FAFF;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  text-align: center;
+  font-family: Rubik;
+  /* color: blue; */
+}
+
+p, p2, li{
+  font-style: italic;
+  color: #92FAFF;
+  text-align: left;
+}
+
+/* place your styles below */
+#search-tools{
+  display:flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#display{
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+#display img {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+}
+
+#display h2 {
+  text-align: center;
+}
+
+#display p {
+  text-align: center;
+}
+
+#auto-suggestions{
+  display: none;
+  border: none;
+  margin: 0 auto;
+  max-width: 25%;
+  background-color:
+}
+
+.suggestion{
+  background-color: transparent;
+  border: none;
+}
+
+.suggestion:focus{
+  outline: none;
+}
+
+.suggestion:hover{
+  color: #ff0000;
+}
+
+#gas{
+ color: white; 
+}
+
+/* .list{
+ text-align: left; 
+} */
+
+.pics{
+  margin:auto;
+  width:100%;
+/*   height:20%;
+  display: block; */
+}
+ p{
+ color: white; 
+}
+
+#luis{
+  width: 50%;
+  float: left;
+  height: 95%;
+  padding-right: 0;
+  border: 2px solid #474e5d;
+/*   width: 500px;
+  float: left;
+  height: 700px;  */
+}
+
+#xiomara{
+  width: 50%;
+  float: left;
+  height: 95%;
+  padding-right:0;
+  border: 2px solid #474e5d;
+/*   width: 500px;
+  float: left;
+  height: 300px; */
+}
+
+#chava{
+  width: 50%;
+  float: left;
+  height: 95%;
+  padding-right: 0;
+  border: 2px solid #474e5d;
+}
+
+#natu{
+  width: 50%;
+  float: left;
+  height: 95%;
+  padding-right: 0;
+  border: 2px solid #474e5d;
+}
+
+#clear {
+    clear: both;
+}
+
+#refresh{
+/* margin: auto; */
+/*   width: 10%; */
+/*   margin-left: auto;
+  margin-right: auto; */
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+#refresh:hover{
+  color: black;
+  background-color: white;
+  border: 2px solid red;
+}
+
+#search-button{
+  background-color: #1f69e0;
+  border: none;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+#search-button:hover{
+  color: black;
+  background-color: white;
+  border: 2px solid #1f69e0;
+}
+
+#fire{
+ margin-left: 625px; 
+ width: 50px;
+ height: 70px;
+  background-color: #92FAFF;
+}
+
+#search-bar{
+ background-color: white; 
+}
+
+img {
+ border-radius: 25px;
+}
+
+/* p2 {
+    display: block;
+    text-alig: left;
+    text-decoration: none;
+} */
